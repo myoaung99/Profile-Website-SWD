@@ -43,7 +43,49 @@ body {
 }
 
 .service-cards-des {
-  height: 170px;
+  height: 150px;
+}
+
+.service-cards-img {
+  width: 100px;
+  height: 100px;
+}
+
+.pricing {
+  background-color: #7e76f915;
+}
+
+.slick-arrow {
+  display: none;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots .slick-active {
+  width: 15px;
+  height: 15px;
+  background-color: #7e76f9;
+}
+
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #7e76f9;
+}
+
+.service-cards {
+  transition: 0.3s;
+}
+
+.service-cards:hover {
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 30%) !important;
+  transform: scale(0.98);
 }
 
 @media screen and (max-width: 576px) {
@@ -51,4 +93,4 @@ body {
   .about-content-text {
     width: 100% !important;
   }
-} ;
+}
