@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/app.css" />
+  </head>
+  <body>
+    <div class="container-fluid site-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand" href="#">
+                <img class="site-logo" src="./img/logo-long.svg" alt="" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div
+                class="collapse navbar-collapse justify-content-end"
+                id="navbarSupportedContent"
+              >
+                <!-- To Make text visible-->
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link text-uppercase" href="#">Home </a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link text-uppercase dropdown-toggle"
+                      href="#"
+                      id="service-dropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Services
+                    </a>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="service-dropdown"
+                    >
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">Prices</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">About</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home">
+      <div class="container-fluid">
+        <div class="container">
+          <div
+            class="row min-vh-100 flex-column-reverse flex-md-row align-items-center justify-content-center"
+          >
+            <div class="col-12 col-md-6">
+              <div class="m-2 m-md-0">
+                <h4 class="text-uppercase">Social Media</h4>
+                <h1
+                  class="text-uppercase text-primary"
+                  style="font-weight: 900"
+                >
+                  For Business
+                </h1>
+                <p class="text-uppercase text-black-50">
+                  PERFOMANCE BASED SOCIAL MEDIA AGENCY
+                  <br class="d-block d-md-none d-lg-block" />
+                  WE ARE LOREM MEDIA
+                </p>
+                <a href="" class="btn btn-primary text-uppercase px-4 fs-6"
+                  >Get A Free Audit</a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="my-4 my-md-0 p-2 p-md-0">
+                <img src="./img/content-1.svg" class="w-100" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+* {
+}
+
+body {
+}
+
+.site-logo {
+  width: 150px;
+}
+
+.site-nav {
+  position: absolute;
+  top: 0;
+}
+
+.home {
+  background-image: url(../img/Bg-Shape.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: top;
+  background-size: 50%;
+}
