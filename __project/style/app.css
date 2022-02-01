@@ -2,6 +2,7 @@
 }
 
 body {
+  height: 300vh;
 }
 
 .site-logo {
@@ -20,3 +21,20 @@ body {
   background-position-y: top;
   background-size: 50%;
 }
+
+.about-text {
+  background-image: url(../img/bg-2.svg);
+  background-size: 100%;
+  background-position: center;
+}
+
+.home-content {
+  margin-top: 5.5rem !important;
+}
+
+@media screen and (max-width: 576px) {
+  .about-content,
+  .about-content-text {
+    width: 100% !important;
+  }
+} ;
