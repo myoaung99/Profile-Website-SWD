@@ -2,7 +2,7 @@
 }
 
 body {
-  height: 300vh;
+  height: 500vh;
 }
 
 .site-logo {
@@ -30,6 +30,20 @@ body {
 
 .home-content {
   margin-top: 5.5rem !important;
+}
+
+.services {
+  background-image: url(../img/bg-2.svg);
+  background-size: 100%;
+  background-position: center;
+}
+
+.service-cards {
+  border: none !important;
+}
+
+.service-cards-des {
+  height: 170px;
 }
 
 @media screen and (max-width: 576px) {
