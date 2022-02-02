@@ -88,9 +88,29 @@ body {
   transform: scale(0.98);
 }
 
+.footer {
+  background-image: url("../img/footer-1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 250px 0 50px 0;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer-logo {
+}
+
 @media screen and (max-width: 576px) {
   .about-content,
   .about-content-text {
     width: 100% !important;
+  }
+
+  .footer {
+    padding: 200px 0 50px 0;
+    background-size: cover;
+    background-position: center;
   }
 }
