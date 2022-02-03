@@ -15,7 +15,8 @@ body {
 
 .site-nav {
   position: absolute;
-  top: 0;
+  top: 0px;
+  z-index: 2000;
 }
 
 .home {
@@ -41,8 +42,8 @@ body {
 
 .social-v {
   position: absolute;
-  left: 30px;
-  bottom: 150px;
+  left: -5%;
+  bottom: 8%;
   display: flex;
   flex-direction: column;
   width: 50px;
@@ -129,6 +130,29 @@ body {
 }
 
 .footer-logo {
+}
+
+.ani-infinite {
+  animation-iteration-count: infinite;
+}
+
+.ani-delay-1 {
+  animation-delay: 0.5s;
+}
+.ani-delay-2 {
+  animation-delay: 1s;
+}
+.ani-delay-3 {
+  animation-delay: 1.5s;
+}
+.ani-delay-4 {
+  animation-delay: 2s;
+}
+.ani-delay-5 {
+  animation-delay: 2.5s;
+}
+.ani-delay-6 {
+  animation-delay: 3s;
 }
 
 @media screen and (max-width: 576px) {
