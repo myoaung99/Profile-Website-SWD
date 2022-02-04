@@ -17,6 +17,51 @@ body {
   position: absolute;
   top: 0px;
   z-index: 2000;
+  color: #fff;
+}
+
+.site-nav-scroll {
+  position: fixed;
+  background-color: #ffffffee;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 15px #00000020;
+  color: #fff !important;
+  animation: toScroll 0.5s linear;
+}
+@keyframes toScroll {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.site-nav-scroll .nav-link {
+  color: #7e76f9 !important;
+}
+
+.site-nav-scroll .menu-icon {
+  color: #7e76f9 !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus-visible {
+  outline: none;
+}
+
+.navbar-toggler-icon:focus-visible {
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-nav {
+  padding-top: 15px;
 }
 
 .home {
@@ -122,7 +167,7 @@ body {
   background-image: url("../img/footer-1.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 250px 0 50px 0;
+  padding: 270px 0 50px 0;
 }
 
 .footer a {
@@ -165,5 +210,43 @@ body {
     padding: 200px 0 50px 0;
     background-size: cover;
     background-position: center;
+  }
+
+  /*Effect on Mobile Home Section */
+  /* The Whole effect is on .site-nav-scroll */
+  .site-nav {
+    background-color: #ffffffee;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 5px #00000020;
+  }
+
+  .site-nav .menu-icon {
+    color: #7e76f9 !important;
+  }
+  .site-nav .nav-link {
+    color: #7e76f9 !important;
+    padding: 15px;
+    background: white;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px #00000015;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .site-nav {
+    background-color: #ffffffee;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 5px #00000020;
+  }
+
+  .site-nav .menu-icon {
+    color: #7e76f9 !important;
+  }
+  .site-nav .nav-link {
+    color: #7e76f9 !important;
+    padding: 15px;
+    background: white;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px #00000015;
   }
 }
