@@ -54,15 +54,6 @@ $(document).ready(function () {
     ],
   });
 
-  wow = new WOW({
-    boxClass: "wow", // default
-    animateClass: "animate__animated", // default
-    offset: 0, // default
-    mobile: false, // default
-    live: true, // default
-  });
-  wow.init();
-
   // Detect Individual Section
   // var waypoints = $("#home").waypoint(
   //   function () {
@@ -147,3 +138,12 @@ $(window).on("load", function () {
     $(this).remove();
   });
 });
+
+wow = new WOW({
+  boxClass: "wow", // default
+  animateClass: "animate__animated", // default
+  offset: 0, // default
+  mobile: true, // default
+  live: true, // default
+});
+wow.init();
