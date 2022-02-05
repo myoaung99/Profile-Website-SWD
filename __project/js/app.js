@@ -7,6 +7,7 @@ $(document).ready(function () {
       $(".site-nav").addClass("site-nav-scroll");
     } else {
       $(".site-nav").removeClass("site-nav-scroll");
+      setActiveNav("home");
     }
   });
 
@@ -62,49 +63,81 @@ $(document).ready(function () {
   });
   wow.init();
 
-  var waypoints = $("#home").waypoint(
-    function () {
-      $(".nav-link").removeClass("current-active");
-      $(".nav-link[href='#home']").addClass("current-active");
-    },
-    {
-      offset: "-10%",
-    }
-  );
-  var waypoints = $("#about").waypoint(
-    function () {
-      $(".nav-link").removeClass("current-active");
-      $(".nav-link[href='#about']").addClass("current-active");
-    },
-    {
-      offset: "25%",
-    }
-  );
-  var waypoints = $("#services").waypoint(
-    function () {
-      $(".nav-link").removeClass("current-active");
-      $(".nav-link[href='#services']").addClass("current-active");
-    },
-    {
-      offset: "25%",
-    }
-  );
-  var waypoints = $("#pricing").waypoint(
-    function () {
-      $(".nav-link").removeClass("current-active");
-      $(".nav-link[href='#pricing']").addClass("current-active");
-    },
-    {
-      offset: "25%",
-    }
-  );
-  var waypoints = $("#contact").waypoint(
-    function () {
-      $(".nav-link").removeClass("current-active");
-      $(".nav-link[href='#contact']").addClass("current-active");
-    },
-    {
-      offset: "25%",
-    }
-  );
+  // Detect Individual Section
+  // var waypoints = $("#home").waypoint(
+  //   function () {
+  //     $(".nav-link").removeClass("current-active");
+  //     $(".nav-link[href='#home']").addClass("current-active");
+  //   },
+  //   {
+  //     offset: "-10%",
+  //   }
+  // );
+  // var waypoints = $("#about").waypoint(
+  //   function () {
+  //     $(".nav-link").removeClass("current-active");
+  //     $(".nav-link[href='#about']").addClass("current-active");
+  //   },
+  //   {
+  //     offset: "25%",
+  //   }
+  // );
+  // var waypoints = $("#services").waypoint(
+  //   function () {
+  //     $(".nav-link").removeClass("current-active");
+  //     $(".nav-link[href='#services']").addClass("current-active");
+  //   },
+  //   {
+  //     offset: "25%",
+  //   }
+  // );
+  // var waypoints = $("#pricing").waypoint(
+  //   function () {
+  //     $(".nav-link").removeClass("current-active");
+  //     $(".nav-link[href='#pricing']").addClass("current-active");
+  //   },
+  //   {
+  //     offset: "25%",
+  //   }
+  // );
+  // var waypoints = $("#contact").waypoint(
+  //   function () {
+  //     $(".nav-link").removeClass("current-active");
+  //     $(".nav-link[href='#contact']").addClass("current-active");
+  //   },
+  //   {
+  //     offset: "25%",
+  //   }
+  // );
 });
+
+function setActiveNav(current) {
+  $(".nav-link").removeClass("active-nav");
+  $(`.nav-link[href='#${current}']`).addClass("active-nav");
+}
+
+(function scrollNav() {
+  let currentActive = $("section[id]");
+  console.log(currentActive);
+  currentActive.waypoint(
+    function (direction) {
+      if (direction == "down") {
+        setActiveNav($(this.element).attr("id"));
+      }
+    },
+    {
+      offset: "150px",
+    }
+  );
+
+  currentActive.waypoint(
+    function (direction) {
+      if (direction == "up") {
+        setActiveNav($(this.element).attr("id"));
+      }
+    },
+    {
+      offset: "-10px",
+    }
+  );
+})();
