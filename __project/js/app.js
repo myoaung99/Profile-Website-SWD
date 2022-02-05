@@ -141,3 +141,9 @@ function setActiveNav(current) {
     }
   );
 })();
+
+$(window).on("load", function () {
+  $(".loader-container").fadeOut(1000, function () {
+    $(this).remove();
+  });
+});

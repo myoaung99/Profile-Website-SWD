@@ -5,10 +5,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  height: 700vh;
-}
-
 .site-logo {
   width: 150px;
 }
@@ -16,7 +12,7 @@ body {
 .site-nav {
   position: absolute;
   top: 0px;
-  z-index: 2000;
+  z-index: 1000;
   color: #fff;
 }
 
@@ -116,6 +112,14 @@ body {
   justify-content: space-between;
 }
 
+.social-v a {
+  transition: 0.3s;
+}
+
+.social-v a:hover {
+  transform: scale(1.5);
+}
+
 .about-text {
   background-image: url(../img/bg-2.svg);
   background-size: 100%;
@@ -144,10 +148,27 @@ body {
 .service-cards-img {
   width: 100px;
   height: 100px;
+  transition: 0.5s;
+}
+
+.service-cards:hover .service-cards-img {
+  transform: scale(1.2);
 }
 
 .pricing {
   background-color: #7e76f915;
+}
+
+.pricing-card-title,
+.pricing-card .h1 {
+  transition: 0.3s ease;
+}
+
+.pricing-card:hover .pricing-card-title {
+  transform: translateY(-10px);
+}
+.pricing-card:hover .h1 {
+  transform: scale(0.9);
 }
 
 .slick-arrow {
@@ -197,6 +218,21 @@ body {
 .footer-logo {
 }
 
+.footer-social a {
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  transform: scale(1.5);
+}
+.footer-quickLinks a {
+  transition: 0.3s;
+}
+
+.footer-quickLinks a:hover {
+  transform: translateX(8px);
+}
+
 .ani-infinite {
   animation-iteration-count: infinite;
 }
@@ -227,7 +263,7 @@ body {
   }
 
   .footer {
-    padding: 200px 0 50px 0;
+    padding: 180px 10px 50px 10px !important;
     background-size: cover;
     background-position: center;
   }
@@ -277,5 +313,9 @@ body {
     background: white;
     margin-bottom: 10px;
     box-shadow: 0 0 5px #00000015;
+  }
+
+  .footer {
+    padding: 150px 0 50px 0;
   }
 }

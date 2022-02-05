@@ -1,6 +1,117 @@
 <!DOCTYPE html>
+<div class="loader-container">
+  <div class="loader">Loading...</div>
+</div>
 <html lang="en">
   <head>
+    <style>
+      .loader-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 2000;
+      }
+      .loader {
+        color: #7e76f9;
+        font-size: 20px;
+        margin: 100px auto;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        position: relative;
+        text-indent: -9999em;
+        -webkit-animation: load4 1.3s infinite linear;
+        animation: load4 1.3s infinite linear;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      @-webkit-keyframes load4 {
+        0%,
+        100% {
+          box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 0;
+        }
+        12.5% {
+          box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+            0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+        }
+        25% {
+          box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+            0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+        }
+        37.5% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0,
+            2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em,
+            -2em -2em 0 -1em;
+        }
+        50% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em,
+            2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em,
+            -2em -2em 0 -1em;
+        }
+        62.5% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0,
+            -2em -2em 0 -1em;
+        }
+        75% {
+          box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em,
+            -2em -2em 0 0;
+        }
+        87.5% {
+          box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0,
+            -2em -2em 0 0.2em;
+        }
+      }
+      @keyframes load4 {
+        0%,
+        100% {
+          box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 0;
+        }
+        12.5% {
+          box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+            0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+        }
+        25% {
+          box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+            0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+        }
+        37.5% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0,
+            2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em,
+            -2em -2em 0 -1em;
+        }
+        50% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em,
+            2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em,
+            -2em -2em 0 -1em;
+        }
+        62.5% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0,
+            -2em -2em 0 -1em;
+        }
+        75% {
+          box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em,
+            -2em -2em 0 0;
+        }
+        87.5% {
+          box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0,
+            -2em -2em 0 0.2em;
+        }
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,6 +141,7 @@
 
     <link rel="stylesheet" href="style/app.css" />
   </head>
+
   <body>
     <header class="container-fluid site-nav animate__slideInDown">
       <div class="container">
@@ -420,9 +532,11 @@
           <div class="row">
             <div class="pricing-slide wow animate__fadeInUpBig">
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       One Package
                     </h4>
                     <p>
@@ -438,9 +552,11 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       Two Package
                     </h4>
                     <p>
@@ -456,9 +572,11 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       Three Package
                     </h4>
                     <p>
@@ -475,9 +593,11 @@
               </div>
 
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       Four Package
                     </h4>
                     <p>
@@ -493,9 +613,11 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       Five Package
                     </h4>
                     <p>
@@ -511,9 +633,11 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       Six Package
                     </h4>
                     <p>
@@ -530,9 +654,11 @@
               </div>
 
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       Seven Package
                     </h4>
                     <p>
@@ -548,9 +674,11 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       Eight Package
                     </h4>
                     <p>
@@ -566,9 +694,11 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-4 mx-3">
-                <div class="card shadow mb-5 py-2 service-cards">
+                <div class="card shadow mb-5 py-2 service-cards pricing-card">
                   <div class="card-body text-center">
-                    <h4 class="text-uppercase my-5 text-primary">
+                    <h4
+                      class="text-uppercase my-5 text-primary pricing-card-title"
+                    >
                       Nine Package
                     </h4>
                     <p>
@@ -654,11 +784,11 @@
         <footer class="footer">
           <div class="container">
             <div class="row">
-              <div class="col-12 col-md-6 col-lg-3 mb-5">
+              <div class="col-12 col-md-12 col-lg-6 col-xl-3 mb-5">
                 <div class="text-light d-flex align-items-center flex-column">
                   <p class="text-uppercase mb-4">Stay in touch</p>
                   <h1 class="text-uppercase fw-bold mb-3">Marketing</h1>
-                  <div class="d-flex justify-content-around w-75">
+                  <div class="d-flex justify-content-around w-50 footer-social">
                     <a href="">
                       <i class="text-white lni lni-facebook-filled"></i>
                     </a>
@@ -675,11 +805,11 @@
                 </div>
               </div>
 
-              <div class="col-12 col-md-6 col-lg-3 mb-5">
-                <div class="text-light ps-lg-5">
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3 mb-5">
+                <div class="text-light ps-xl-5">
                   <h4 class="text-uppercase mb-4">Quick Links</h4>
                   <div
-                    class="d-flex flex-column align-items-start justify-content-between"
+                    class="d-flex flex-column align-items-start justify-content-between footer-quickLinks"
                   >
                     <a href="" class="text-light">About</a>
                     <a href="" class="text-light">Home</a>
@@ -690,7 +820,9 @@
                 </div>
               </div>
 
-              <div class="col-12 col-md-6 col-lg-3 mb-5">
+              <div
+                class="col-12 col-md-6 col-lg-6 col-xl-3 mb-5 ps-lg-5 ps-xl-0"
+              >
                 <div class="mb-4">
                   <h4 class="text-uppercase text-light">Hours</h4>
                 </div>
@@ -724,7 +856,7 @@
                 </div>
               </div>
 
-              <div class="col-12 col-md-6 col-lg-3 mb-5">
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3 mb-5">
                 <div class="">
                   <h4 class="text-uppercase mb-4 text-light">Contact</h4>
                   <div class="text-light">
@@ -741,6 +873,19 @@
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div
+                class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center"
+              >
+                <span class="text-light"
+                  >Copy Right © 2022, All Rights Reserved.
+                </span>
+                <span class="text-light"
+                  >Designed by <a href="" class="text-light">Myo Myint Aung</a>
+                </span>
               </div>
             </div>
           </div>
